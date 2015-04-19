@@ -1,4 +1,4 @@
-# Lee_CSCI2270_FinalProject
+# Data Structures Final Project
 
 ## Project Summary
 
