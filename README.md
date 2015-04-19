@@ -1,27 +1,25 @@
 # Lee_CSCI2270_FinalProject
 
-## Sections
-
-* [Project Summary]
+## Project Summary
 
 
 
 
-* [How To Run]
+## How To Run
 
 
 
 
-* [Dependencies]
+## Dependencies
 
 
 
 
-* [System Requirements]
+## System Requirements
 
 
 
 
-* [Group Members]
+## Group Members
 
 Jeong Min Lee
