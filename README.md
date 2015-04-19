@@ -7,7 +7,7 @@
 
 ## How To Run
 
-Specific discussion on the library code: [See the document](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/project_documentation.md)
+Specific discussion on the library code: [See the documentation.](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/project_documentation.md)
 
 
 ## Dependencies
