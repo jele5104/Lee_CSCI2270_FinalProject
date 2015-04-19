@@ -17,7 +17,7 @@ Specific discussion on the library code: [See the documentation.](https://github
 
 ## System Requirements
 
-
+There are not any specific system requirements. The program can be run in any operating system.
 
 
 ## Group Members
