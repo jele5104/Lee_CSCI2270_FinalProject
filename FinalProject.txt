@@ -1,0 +1,10 @@
+Jumpsuit,30
+Baseball Cap,15
+Hoodie,35
+Rainboots,90
+Uggs,120
+Polo,80
+Skinny Jeans,50
+Maxi Dress,20
+Long Coat,150
+Sweater,60
