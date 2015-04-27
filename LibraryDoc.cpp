@@ -1,13 +1,13 @@
 /*
 Function prototype:
-void HashTable::deleteMovie(string)
+void ItemTree::addItemNode(string item, int price)
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method adds items into the binary search tree. Every item are stored in a separate node with pointers.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
