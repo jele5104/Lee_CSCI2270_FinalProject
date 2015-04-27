@@ -27,10 +27,11 @@ Jeong Min Lee
 Hana Sunny (Ziyi Wang)
 
 
-
 ## Contributors
 
-
+None.
 
 
 ## Open issues/bugs
+
+N/A
