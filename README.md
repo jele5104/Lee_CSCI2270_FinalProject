@@ -8,6 +8,10 @@ Assume that our friends decided to sell items in a small online market they crea
 ## How To Run
 
 Specific discussion on the library code: [See the documentation.](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/LibraryDoc.cpp)
+ - Download FinalProject.cpp, FinalProject.txt, ItemTree.cpp and ItemTree.h
+ - Compile and run those files together (works best in codeblocks).
+ - When entering item name, be sure to enter exact spellings and capitalizations.
+ - When entering item price, only enter whole integers. 
 
 
 ## Dependencies
@@ -18,6 +22,7 @@ When the program starts, a text file is read into the program. The file consists
 ## System Requirements
 
 The program can be executed in Ubuntu. If your computer hosts Ubuntu, this will work.
+C++ 11
 
 
 ## Group Members
