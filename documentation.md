@@ -72,18 +72,21 @@ void ItemTree::addItemNode(string item, int price)
 ## deleteItemNode
 
 **Function prototype**:
-
+void ItemTree::deleteItemNode(string item);
 
 **Function description**:
-
+This method deletes the node that the item information is stored in. 
 
 **Example**:
 ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Item.addItemNode(itemAdd, price);
 
 **Precondition**:
+There has to be at least one item pre-existing in the list.
+User must type the item with the same spelling and capitalization as they did when they added the item or how the item appears in the printed list.
 
 **Post condition**:
+The item the user have removed  is removed and will disappear from the print inventory list.
 
 ```javascript
 void ItemTree::deleteItemNode(string item)
@@ -173,9 +176,10 @@ void ItemTree::deleteItemNode(string item)
 ## findItem
 
 **Function prototype**:
-
+void ItemTree::findItem(string item);
 
 **Function description**:
+This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 
 **Example**:
@@ -183,8 +187,11 @@ ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
 **Precondition**:
+The spelling and capitalization must be the same as it shows in the print inventory list.
+If the item you entered does not exist, the program will say 'Item not found'.
 
 **Post condition**:
+If the item the user is searching for exist in the inventory list, the program will print the item name and price.
 
 ```javascript
 void ItemTree::findItem(string item)
@@ -207,9 +214,10 @@ void ItemTree::findItem(string item)
 ## searchItemNode
 
 **Function prototype**:
-
+ItemNode* ItemTree::searchItemTree(ItemNode *node, string item);
 
 **Function description**:
+This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 
 **Example**:
@@ -217,8 +225,10 @@ ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
 **Precondition**:
+Item has to exist. If the item does not exist in the inventory list, it will print 'Item not found'.
 
 **Post condition**:
+If conditions are satified, it will be considered as found and the item and price will be printed through void ItemTree::findItem(string item);.
 
 ```javascript
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
@@ -249,18 +259,19 @@ ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
 ## countItemNodes
 
 **Function prototype**:
-
+int ItemTree::countItemNodes(ItemNode *node);
 
 **Function description**:
-
+This method counts how many items are in the inventory list.
 
 **Example**:
-ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Item.countItemNodes();
 
 **Precondition**:
+has to have items in inventory list
 
 **Post condition**:
+Post condition: prints number of items remain
 
 ```javascript
 int ItemTree::countItemNodes(ItemNode *node)
@@ -393,15 +404,17 @@ void ItemTree::printPostOrder(ItemNode *node)
 void ItemTree::printSold()
 
 **Function description**:
-
+This method prints how many items have been sold. Collects deleted items and prints each item through a for loop.
 
 **Example**:
 ItemTree Item;
 Item.printSold()
 
 **Precondition**:
+items but have been 'deleted' from the list, marking it 'sold'.
 
 **Post condition**:
+lists all the deleted items(sold items).
 
 ```javascript
 void ItemTree::printSold()
