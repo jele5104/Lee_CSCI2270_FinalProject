@@ -2,25 +2,25 @@
 
 ## addItemNode
 
-Function prototype:
+**Function prototype**:
 
 void ItemTree::addItemNode(string item, int price)
 
 
-Function description:
+**Function description**:
 
 This method adds items into the binary search tree. 
 
 
-Example:
+**Example**:
 
 ItemTree Item;
 
 Item.addItemNode(itemAdd, price)
 
 
-Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
-Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
+**Precondition**: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
+**Post condition**: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
 
 
 ```javascript
@@ -70,18 +70,19 @@ void ItemTree::addItemNode(string item, int price)
 
 ## deleteItemNode
 
-Function prototype:
+**Function prototype**:
 
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 void ItemTree::deleteItemNode(string item)
@@ -170,18 +171,19 @@ void ItemTree::deleteItemNode(string item)
 
 ## findItem
 
-Function prototype:
+**Function prototype**:
 
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 void ItemTree::findItem(string item)
@@ -203,18 +205,19 @@ void ItemTree::findItem(string item)
 
 ## searchItemNode
 
-Function prototype:
+**Function prototype**:
 
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
@@ -244,18 +247,19 @@ ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
 
 ## countItemNodes
 
-Function prototype:
+**Function prototype**:
 
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 int ItemTree::countItemNodes(ItemNode *node)
@@ -277,18 +281,19 @@ int ItemTree::countItemNodes(ItemNode *node)
 
 ## printInOrder
 
-Function prototype:
+**Function prototype**:
 
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 void ItemTree::printInOrder(ItemNode *node)
@@ -311,18 +316,19 @@ void ItemTree::printInOrder(ItemNode *node)
 
 ## printPreOrder
 
-Function prototype:
+**Function prototype**:
 
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.addItemNode(itemAdd, price)
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 void ItemTree::printPreOrder(ItemNode *node)
@@ -345,21 +351,22 @@ void ItemTree::printPreOrder(ItemNode *node)
 
 ## printPostOrder
 
-Function prototype:
+**Function prototype**:
 void ItemTree::printPostOrder(ItemNode *node)
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 printPostOrder()
 {
     printPostOrder(root);
 }
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 void ItemTree::printPostOrder(ItemNode *node)
@@ -381,18 +388,19 @@ void ItemTree::printPostOrder(ItemNode *node)
 
 ## printSold
 
-Function prototype:
+**Function prototype**:
 void ItemTree::printSold()
 
-Function description:
+**Function description**:
 
 
-Example:
+**Example**:
 ItemTree Item;
 Item.printSold()
 
-Precondition:
-Post condition:
+**Precondition**:
+
+**Post condition**:
 
 ```javascript
 void ItemTree::printSold()
