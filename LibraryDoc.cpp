@@ -1,17 +1,20 @@
 
 /*
 Function prototype:
-void ItemTree::addItemNode(string item, int price)
+void ItemTree::addItemNode(string item, int price);
 
 Function description:
 This method adds items into the binary search tree. Every item are stored in a separate node with pointers.
 
 Example:
 ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Item.addItemNode(itemAdd, price);
 
 Precondition: 
+When the program ask the user to enter item name, user must enter item name in letter and only letters.
+When the program ask the user to enter item price, user must enter numbers and only whole numbers. (no $ symbol required)
 Post condition: 
+The program should now contain the item and price the user have added. If the user choose to print the list after this option, the user should be able to see the added item in the list.
 */
 void ItemTree::addItemNode(string item, int price)
 {
@@ -58,17 +61,21 @@ void ItemTree::addItemNode(string item, int price)
 
 /*
 Function prototype:
-void ItemTree::deleteItemNode(string item)
+void ItemTree::deleteItemNode(string item);
 
 Function description:
 This method deletes the node that the item information is stored in. 
 
 Example:
 ItemTree Item;
-Item.deleteItemNode(itemDelete)
+Item.deleteItemNode(itemDelete);
 
 Precondition: 
+There has to be at least one item pre-existing in the list.
+User must type the item with the same spelling and capitalization as they did when they added the item or how the item appears in the printed list.
+
 Post condition: 
+The item the user have removed  is removed and will disappear from the print inventory list.
 */
 void ItemTree::deleteItemNode(string item)
 {
@@ -155,17 +162,21 @@ void ItemTree::deleteItemNode(string item)
 
 /*
 Function prototype:
-void ItemTree::findItem(string item)
+void ItemTree::findItem(string item);
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 ItemTree Item;
-Item.findItem(itemFind)
+Item.findItem(itemFind);
 
-Precondition: 
+Precondition:
+The spelling and capitalization must be the same as it shows in the print inventory list.
+If the item you entered does not exist, the program will say 'Item not found'.
+
 Post condition: 
+If the item the user is searching for exist in the inventory list, the program will print the item name and price.
 */
 void ItemTree::findItem(string item)
 {
@@ -185,17 +196,20 @@ void ItemTree::findItem(string item)
 
 /*
 Function prototype:
-ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
+ItemNode* ItemTree::searchItemTree(ItemNode *node, string item);
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ht.deleteMovie("The Usual Suspects");
 
 Precondition: 
+Item has to exist. If the item does not exist in the inventory list, it will print 'Item not found'.
+
 Post condition: 
+If conditions are satified, it will be considered as found and the item and price will be printed through void ItemTree::findItem(string item);.
 */
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
 {
@@ -223,14 +237,14 @@ ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
 
 /*
 Function prototype:
-int ItemTree::countItemNodes(ItemNode *node)
+int ItemTree::countItemNodes(ItemNode *node);
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ht.deleteMovie("The Usual Suspects");
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
@@ -252,14 +266,14 @@ int ItemTree::countItemNodes(ItemNode *node)
 
 /*
 Function prototype:
-void ItemTree::printInOrder(ItemNode *node)
+void ItemTree::printInOrder(ItemNode *node);
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ht.deleteMovie("The Usual Suspects");
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
@@ -282,14 +296,14 @@ void ItemTree::printInOrder(ItemNode *node)
 
 /*
 Function prototype:
-void ItemTree::printPreOrder(ItemNode *node)
+void ItemTree::printPreOrder(ItemNode *node);
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ht.deleteMovie("The Usual Suspects");
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
@@ -312,14 +326,14 @@ void ItemTree::printPreOrder(ItemNode *node)
 
 /*
 Function prototype:
-void ItemTree::printPostOrder(ItemNode *node)
+void ItemTree::printPostOrder(ItemNode *node);
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ht.deleteMovie("The Usual Suspects");
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
@@ -342,14 +356,14 @@ void ItemTree::printPostOrder(ItemNode *node)
 
 /*
 Function prototype:
-void ItemTree::printSold()
+void ItemTree::printSold();
 
 Function description:
 This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
 
 Example:
 HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ht.deleteMovie("The Usual Suspects");
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
