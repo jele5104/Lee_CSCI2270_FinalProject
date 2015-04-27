@@ -12,7 +12,7 @@ Specific discussion on the library code: [See the documentation.](https://github
 
 ## Dependencies
 
-When the program starts, a text file is read into the program. The file consists of items to be sold and price of the items. The form of the text file is shown in the example text file that we provide [here.](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/FinalProject.txt)
+When the program starts, a text file is read into the program. The file consists of items to be sold and price of the items. The form of the text file is shown in the example text file that we provide [here.](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/FinalProject.txt) You could just use the text file provided or you can create a new text file with items you want IN THE SAME FORM as the example file. Otherwise, the program will not be able to read in the file correctly.
 
 
 ## System Requirements
