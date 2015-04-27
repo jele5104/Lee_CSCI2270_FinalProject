@@ -179,7 +179,7 @@ void ItemTree::deleteItemNode(string item)
 void ItemTree::findItem(string item);
 
 **Function description**:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method searches through the BST tree and finds the item the user is searching for.
 
 
 **Example**:
@@ -217,12 +217,12 @@ void ItemTree::findItem(string item)
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item);
 
 **Function description**:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method searches through the BST for the specific node.
 
 
 **Example**:
-ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Implemented in findItem(item):
+searchItemTree(root, item);
 
 **Precondition**:
 Item has to exist. If the item does not exist in the inventory list, it will print 'Item not found'.
@@ -294,18 +294,20 @@ int ItemTree::countItemNodes(ItemNode *node)
 ## printInOrder
 
 **Function prototype**:
-
+void ItemTree::printInOrder(ItemNode *node);
 
 **Function description**:
-
+This method print the values in the tree in sorted order: left-parent-right.
 
 **Example**:
 ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Item.printInOrder();
 
 **Precondition**:
+must have BST
 
 **Post condition**:
+prints items out in left-parent-right order.
 
 ```javascript
 void ItemTree::printInOrder(ItemNode *node)
@@ -329,18 +331,20 @@ void ItemTree::printInOrder(ItemNode *node)
 ## printPreOrder
 
 **Function prototype**:
-
+void ItemTree::printPreOrder(ItemNode *node);
 
 **Function description**:
-
+This method print the root value before printing the left and right child values.
 
 **Example**:
 ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Item.printPreOrder();
 
 **Precondition**:
-
+ must have BST
+ 
 **Post condition**:
+Post condition: prints items out in root then left and right child order.
 
 ```javascript
 void ItemTree::printPreOrder(ItemNode *node)
@@ -367,7 +371,7 @@ void ItemTree::printPreOrder(ItemNode *node)
 void ItemTree::printPostOrder(ItemNode *node)
 
 **Function description**:
-
+This function print the left and right child values before the parent value.
 
 **Example**:
 ItemTree Item;
@@ -377,8 +381,10 @@ printPostOrder()
 }
 
 **Precondition**:
+must have BST
 
 **Post condition**:
+prints items out in left and right child value first then parent order.
 
 ```javascript
 void ItemTree::printPostOrder(ItemNode *node)
