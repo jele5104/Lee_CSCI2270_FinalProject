@@ -2,20 +2,19 @@
 
 ## addItemNode
 
-/*
 Function prototype:
 void ItemTree::addItemNode(string item, int price)
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method adds items into the binary search tree. 
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects")
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
-*/
+
 
 ```javascript
 void ItemTree::addItemNode(string item, int price)
@@ -63,6 +62,19 @@ void ItemTree::addItemNode(string item, int price)
 
 
 ## deleteItemNode
+
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 void ItemTree::deleteItemNode(string item)
@@ -151,6 +163,18 @@ void ItemTree::deleteItemNode(string item)
 
 ## findItem
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 void ItemTree::findItem(string item)
@@ -172,6 +196,18 @@ void ItemTree::findItem(string item)
 
 ## searchItemNode
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
@@ -201,6 +237,18 @@ ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
 
 ## countItemNodes
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 int ItemTree::countItemNodes(ItemNode *node)
@@ -222,6 +270,18 @@ int ItemTree::countItemNodes(ItemNode *node)
 
 ## printInOrder
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 void ItemTree::printInOrder(ItemNode *node)
@@ -244,6 +304,18 @@ void ItemTree::printInOrder(ItemNode *node)
 
 ## printPreOrder
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 void ItemTree::printPreOrder(ItemNode *node)
@@ -266,6 +338,18 @@ void ItemTree::printPreOrder(ItemNode *node)
 
 ## printPostOrder
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 void ItemTree::printPostOrder(ItemNode *node)
@@ -287,6 +371,18 @@ void ItemTree::printPostOrder(ItemNode *node)
 
 ## printSold
 
+Function prototype:
+
+
+Function description:
+
+
+Example:
+ItemTree Item;
+Item.addItemNode(itemAdd, price)
+
+Precondition:
+Post condition:
 
 ```javascript
 void ItemTree::printSold()
