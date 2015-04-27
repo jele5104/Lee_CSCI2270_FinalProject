@@ -199,11 +199,11 @@ Function prototype:
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item);
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method searches through the BST for the item.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects");
+ItemTree item;
+Item.searchItemTree(node, item);
 
 Precondition: 
 Item has to exist. If the item does not exist in the inventory list, it will print 'Item not found'.
@@ -240,14 +240,13 @@ Function prototype:
 int ItemTree::countItemNodes(ItemNode *node);
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method counts how many items are in the inventory list.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects");
+Item.countItemNodes();
 
-Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
-Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
+Precondition: has to have items in inventory list
+Post condition: prints number of items remain
 */
 int ItemTree::countItemNodes(ItemNode *node)
 {
@@ -359,14 +358,13 @@ Function prototype:
 void ItemTree::printSold();
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method prints how many items have been sold. Collects deleted items and prints each item through a for loop.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects");
+Item.printSold();
 
-Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
-Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
+Precondition: items but have been 'deleted' from the list, marking it 'sold'.
+Post condition: lists all the deleted items(sold items).
 */
 void ItemTree::printSold()
 {
