@@ -184,3 +184,112 @@ ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
     }
 }
 ```
+
+
+## countItemNodes
+
+
+```javascript
+int ItemTree::countItemNodes(ItemNode *node)
+{
+    if (node->leftChild != NULL)
+    {
+        countItemNodes(node->leftChild);
+    }
+
+    cnt++;
+
+    if (node->rightChild != NULL)
+    {
+        countItemNodes(node->rightChild);
+    }
+}
+```
+
+
+## printInOrder
+
+
+```javascript
+void ItemTree::printInOrder(ItemNode *node)
+{
+    if (node->leftChild != NULL)
+    {
+        printInOrder(node->leftChild);
+    }
+
+    cout << node->item << ":" << node->price << endl;
+
+    if (node->rightChild != NULL)
+    {
+        printInOrder(node->rightChild);
+    }
+}
+```
+
+
+
+## printPreOrder
+
+
+```javascript
+void ItemTree::printPreOrder(ItemNode *node)
+{
+    cout << node->item << ":" << node->price << endl;
+
+    if (node->leftChild != NULL)
+    {
+        printPreOrder(node->leftChild);
+    }
+
+    if (node->rightChild != NULL)
+    {
+        printPreOrder(node->rightChild);
+    }
+}
+```
+
+
+
+## printPostOrder
+
+
+```javascript
+void ItemTree::printPostOrder(ItemNode *node)
+{
+    if (node->leftChild != NULL)
+    {
+        printPostOrder(node->leftChild);
+    }
+
+    if (node->rightChild != NULL)
+    {
+        printPostOrder(node->rightChild);
+    }
+
+    cout << node->item << ":" << node->price << endl;
+}
+```
+
+
+## printSold
+
+
+```javascript
+void ItemTree::printSold()
+{
+    if (soldList.size() == 0)
+    {
+        cout << "List of sold items unavailable" << endl;
+    }
+    else
+    {
+        cout << "<ITEM>" << endl;
+
+        for (int i=0; i<soldList.size(); i++)
+        {
+            cout << soldList[i] << endl;
+        }
+    }
+}
+```
