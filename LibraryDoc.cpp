@@ -22,14 +22,14 @@ void ItemTree::addItemNode(string item, int price)
     ItemNode *x = root;
     ItemNode *P = NULL;
 
-    if (x == NULL)
+    if (x == NULL)//if there is nothing, set root
     {
         root = next;
         root->parent = NULL;
         root->leftChild = NULL;
         root->rightChild = NULL;
     }
-    else
+    else//if there is at least a root
     {
         while (x != NULL)
         {
@@ -81,7 +81,7 @@ void ItemTree::deleteItemNode(string item)
 {
     ItemNode *nodeDelete = searchItemTree(root, item);
 
-    if (nodeDelete == NULL)
+    if (nodeDelete == NULL) //if item does not exist == NULL
     {
         cout << "Item not found." << endl;
     }
@@ -184,7 +184,7 @@ void ItemTree::findItem(string item)
     {
         cout << "Item not found" << endl;
     }
-    else
+    else //if item is found
     {
         cout << "Item Information:" << endl
              << "******************" << endl
@@ -251,14 +251,14 @@ Post condition: movie node deleted from chain and memory freed. Pointers updated
 */
 int ItemTree::countItemNodes(ItemNode *node)
 {
-    if (node->leftChild != NULL)
+    if (node->leftChild != NULL) // if left child exist
     {
         countItemNodes(node->leftChild);
     }
 
-    cnt++;
+    cnt++; //cnt increment/number of items
 
-    if (node->rightChild != NULL)
+    if (node->rightChild != NULL) // if right child exist
     {
         countItemNodes(node->rightChild);
     }
@@ -280,14 +280,14 @@ Post condition: movie node deleted from chain and memory freed. Pointers updated
 */
 void ItemTree::printInOrder(ItemNode *node)
 {
-    if (node->leftChild != NULL)
+    if (node->leftChild != NULL) // if left child exist
     {
         printInOrder(node->leftChild);
     }
 
     cout << node->item << ":" << node->price << endl;
 
-    if (node->rightChild != NULL)
+    if (node->rightChild != NULL) // if right child exist
     {
         printInOrder(node->rightChild);
     }
@@ -312,12 +312,12 @@ void ItemTree::printPreOrder(ItemNode *node)
 {
     cout << node->item << ":" << node->price << endl;
 
-    if (node->leftChild != NULL)
+    if (node->leftChild != NULL) // if left child exist
     {
         printPreOrder(node->leftChild);
     }
 
-    if (node->rightChild != NULL)
+    if (node->rightChild != NULL) // if right child exist
     {
         printPreOrder(node->rightChild);
     }
@@ -340,12 +340,12 @@ Post condition: movie node deleted from chain and memory freed. Pointers updated
 */
 void ItemTree::printPostOrder(ItemNode *node)
 {
-    if (node->leftChild != NULL)
+    if (node->leftChild != NULL)// if left child exist
     {
         printPostOrder(node->leftChild);
     }
 
-    if (node->rightChild != NULL)
+    if (node->rightChild != NULL) //if right child exist
     {
         printPostOrder(node->rightChild);
     }
@@ -378,7 +378,7 @@ void ItemTree::printSold()
     {
         cout << "<ITEM>" << endl;
 
-        for (int i=0; i<soldList.size(); i++)
+        for (int i=0; i<soldList.size(); i++)//goes through entire list/each item
         {
             cout << soldList[i] << endl;
         }
