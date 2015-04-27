@@ -3,14 +3,21 @@
 ## addItemNode
 
 Function prototype:
+
 void ItemTree::addItemNode(string item, int price)
 
+
 Function description:
+
 This method adds items into the binary search tree. 
 
+
 Example:
+
 ItemTree Item;
+
 Item.addItemNode(itemAdd, price)
+
 
 Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
 Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
