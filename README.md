@@ -7,7 +7,7 @@ Assume that our friends decided to sell items in a small online market they crea
 
 ## How To Run
 
-Specific discussion on the library code: [See the documentation.](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/project_documentation.md)
+Specific discussion on the library code: [See the documentation.](https://github.com/jele5104/Lee_CSCI2270_FinalProject/blob/master/LibraryDoc.cpp)
 
 
 ## Dependencies
@@ -17,7 +17,7 @@ When the program starts, a text file is read into the program. The file consists
 
 ## System Requirements
 
-There are not any specific system requirements. The program can be run in any operating system.
+The program can be executed in Ubuntu. If your computer hosts Ubuntu, this will work.
 
 
 ## Group Members
