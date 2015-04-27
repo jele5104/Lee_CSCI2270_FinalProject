@@ -339,14 +339,17 @@ void ItemTree::printPreOrder(ItemNode *node)
 ## printPostOrder
 
 Function prototype:
-
+void ItemTree::printPostOrder(ItemNode *node)
 
 Function description:
 
 
 Example:
 ItemTree Item;
-Item.addItemNode(itemAdd, price)
+printPostOrder()
+{
+    printPostOrder(root);
+}
 
 Precondition:
 Post condition:
@@ -372,14 +375,14 @@ void ItemTree::printPostOrder(ItemNode *node)
 ## printSold
 
 Function prototype:
-
+void ItemTree::printSold()
 
 Function description:
 
 
 Example:
 ItemTree Item;
-Item.addItemNode(itemAdd, price)
+Item.printSold()
 
 Precondition:
 Post condition:
