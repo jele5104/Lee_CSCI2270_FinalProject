@@ -134,3 +134,53 @@ void ItemTree::deleteItemNode(string item)
     }
 }
 ```
+
+
+## findItem
+
+
+```javascript
+void ItemTree::findItem(string item)
+{
+    if (searchItemTree(root, item) == NULL)
+    {
+        cout << "Item not found" << endl;
+    }
+    else
+    {
+        cout << "Item Information:" << endl
+             << "******************" << endl
+             << "Item:" << searchItemTree(root, item)->item << endl
+             << "Price:" << searchItemTree(root, item)->price << endl;
+    }
+}
+```
+
+
+## searchItemNode
+
+
+```javascript
+ItemNode* ItemTree::searchItemTree(ItemNode *node, string item)
+{
+    if (node == NULL)
+    {
+        return node;
+    }
+    else if (node->item == item)
+    {
+        return node;
+    }
+    else
+    {
+        if (node->item.compare(item) <= 0)
+        {
+            return searchItemTree(node->rightChild, item);
+        }
+        else
+        {
+            return searchItemTree(node->leftChild, item);
+        }
+    }
+}
+```
