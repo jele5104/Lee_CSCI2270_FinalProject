@@ -1,4 +1,3 @@
-// Jeong Min Lee
 // Final Project
 
 #include <iostream>
