@@ -165,7 +165,7 @@ Function prototype:
 void ItemTree::findItem(string item);
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method searches through the BST tree and finds the item the user is searching for.
 
 Example:
 ItemTree Item;
@@ -199,11 +199,11 @@ Function prototype:
 ItemNode* ItemTree::searchItemTree(ItemNode *node, string item);
 
 Function description:
-This method searches through the BST for the item.
+This method searches through the BST for the specific node.
 
 Example:
-ItemTree item;
-Item.searchItemTree(node, item);
+Implemented in findItem(item):
+searchItemTree(root, item);
 
 Precondition: 
 Item has to exist. If the item does not exist in the inventory list, it will print 'Item not found'.
@@ -240,13 +240,14 @@ Function prototype:
 int ItemTree::countItemNodes(ItemNode *node);
 
 Function description:
-This method counts how many items are in the inventory list.
+This method increment the counter for every item in the list.
 
 Example:
+ItemTree Item;
 Item.countItemNodes();
 
-Precondition: has to have items in inventory list
-Post condition: prints number of items remain
+Precondition: must have items in inventory list.
+Post condition: prints how many items remaining in inventory list, marked as 'unsold'.
 */
 int ItemTree::countItemNodes(ItemNode *node)
 {
@@ -268,14 +269,14 @@ Function prototype:
 void ItemTree::printInOrder(ItemNode *node);
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method print the values in the tree in sorted order: left-parent-right.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects");
+ItemTree Item;
+Item.printInOrder();
 
-Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
-Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
+Precondition: must have BST
+Post condition: prints items out in left-parent-right order.
 */
 void ItemTree::printInOrder(ItemNode *node)
 {
@@ -298,14 +299,14 @@ Function prototype:
 void ItemTree::printPreOrder(ItemNode *node);
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This method print the root value before printing the left and right child values.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects");
+ItemTree Item;
+Item.printPreOrder();
 
-Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
-Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
+Precondition: must have BST
+Post condition: prints items out in root then left and right child order.
 */
 void ItemTree::printPreOrder(ItemNode *node)
 {
@@ -328,14 +329,14 @@ Function prototype:
 void ItemTree::printPostOrder(ItemNode *node);
 
 Function description:
-This method calculates the hashcode for the input movie name, and deletes the movie from the hash table. Handles cases where movie is first, mid, or last node in the chain.
+This function print the left and right child values before the parent value.
 
 Example:
-HashTable ht;
-ht.deleteMovie("The Usual Suspects");
+ItemTree Item;
+Item.printPostOrder();
 
-Precondition: Unused locations in hashTable vector are NULL. Movies stored using correctly calculated hash code calculated from movie title. The input string name is movie title.
-Post condition: movie node deleted from chain and memory freed. Pointers updated to bypass deleted movie.
+Precondition: must have BST
+Post condition: prints items out in left and right child value first then parent order.
 */
 void ItemTree::printPostOrder(ItemNode *node)
 {
@@ -361,9 +362,11 @@ Function description:
 This method prints how many items have been sold. Collects deleted items and prints each item through a for loop.
 
 Example:
-Item.printSold();
+ItemTree Item; 
+Item.printSold()
 
 Precondition: items but have been 'deleted' from the list, marking it 'sold'.
+
 Post condition: lists all the deleted items(sold items).
 */
 void ItemTree::printSold()
