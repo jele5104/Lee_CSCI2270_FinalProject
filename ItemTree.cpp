@@ -17,9 +17,9 @@ ItemTree::~ItemTree()
     DeleteAll(root);
 }
 
-void ItemTree::addItemNode(string item, int price)
+void ItemTree::addItemNode(string item, int price, string cat)
 {
-    ItemNode *next = new ItemNode(item, price);
+    ItemNode *next = new ItemNode(item, price, cat);
     ItemNode *x = root;
     ItemNode *P = NULL;
 
@@ -57,6 +57,7 @@ void ItemTree::addItemNode(string item, int price)
             P->rightChild = next;
         }
     }
+    cout << item << " was added to the list for a price of " << price << "." << endl;
 }
 
 void ItemTree::deleteItemNode(string item)
@@ -138,6 +139,7 @@ void ItemTree::deleteItemNode(string item)
 
             delete replNode;
         }
+	cout << item << "is now marked as sold." << endl;
     }
 }
 
@@ -326,4 +328,33 @@ void ItemTree::DeleteAll(ItemNode *node)
     }
 
     delete node;
+}
+
+void ItemTree::printFromCat(string cat)
+{
+	if (root == NULL)
+    {
+        cout << "List empty" << endl;
+    }
+    else
+    {
+        cout << "<ITEM:PRICE>" << endl;
+        printFromCat(root, cat);
+    }
+}
+
+void ItemTree::printFromCat(ItemNode *node, string cat)
+{
+	if (node->leftChild != NULL)
+    {
+        printFromCat(node->leftChild, cat);
+    }
+	if (node->category == cat)
+	{
+		cout << node->item << ":" << node->price << endl;
+	}
+    if (node->rightChild != NULL)
+    {
+        printFromCat(node->rightChild, cat);
+    }
 }

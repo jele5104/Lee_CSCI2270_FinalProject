@@ -1,10 +1,10 @@
-Jumpsuit,30
-Baseball Cap,15
-Hoodie,35
-Rainboots,90
-Uggs,120
-Polo,80
-Skinny Jeans,50
-Maxi Dress,20
-Long Coat,150
-Sweater,60
+Jumpsuit,30,Other
+Baseball Cap,15,Hat
+Hoodie,35,Upper
+Rainboots,90,Shoes
+Uggs,120,Shoes
+Polo,80,Shoes
+Skinny Jeans,50,Lower
+Maxi Dress,20,Other
+Long Coat,150,Upper
+Sweater,60,Upper
