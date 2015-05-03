@@ -59,7 +59,7 @@ void ItemTree::addItemNode(string item, int price)
     }
 }
 
-void ItemTree::deleteItemNode(string item)
+void ItemTree::deleteItemSoldNode(string item)
 {
     ItemNode *nodeDelete = searchItemTree(root, item);
 
@@ -118,6 +118,86 @@ void ItemTree::deleteItemNode(string item)
         }
         // Two children
         else if (nodeDelete->leftChild!=NULL && nodeDelete->rightChild!=NULL)
+        {
+            ItemNode *replNode = minimumNode(nodeDelete->rightChild);
+            nodeDelete->item = replNode->item;
+            nodeDelete->price = replNode->price;
+
+            if (replNode->rightChild != NULL)
+            {
+                replNode->rightChild->parent = replNode->parent;
+            }
+            if (replNode == replNode->parent->leftChild)
+            {
+                replNode->parent->leftChild = replNode->rightChild;
+            }
+            else if (replNode == replNode->parent->rightChild)
+            {
+                replNode->parent->rightChild = replNode->rightChild;
+            }
+
+            delete replNode;
+        }
+    }
+}
+
+void ItemTree::deleteItemNotSoldNode(string item)
+{
+    ItemNode *nodeDelete = searchItemTree(root, item);
+
+    if (nodeDelete == NULL)
+    {
+        cout << "Item not found." << endl;
+    }
+    else
+    {
+        if (nodeDelete->leftChild==NULL || nodeDelete->rightChild==NULL)
+        {
+            // No Children
+            if (nodeDelete->leftChild==NULL && nodeDelete->rightChild==NULL)
+            {
+                if (nodeDelete == nodeDelete->parent->leftChild)
+                {
+                    nodeDelete->parent->leftChild = NULL;
+                }
+                else if (nodeDelete == nodeDelete->parent->rightChild)
+                {
+                    nodeDelete->parent->rightChild = NULL;
+                }
+
+                delete nodeDelete;
+            }
+            // One child
+            else
+            {
+                if (nodeDelete->leftChild == NULL)
+                {
+                        if (nodeDelete == nodeDelete->parent->leftChild)
+                    {
+                        nodeDelete->parent->leftChild = nodeDelete->rightChild;
+                    }
+                    else if (nodeDelete == nodeDelete->parent->rightChild)
+                    {
+                        nodeDelete->parent->rightChild = nodeDelete->rightChild;
+                    }
+                }
+                else if (nodeDelete->rightChild == NULL)
+                {
+                    if (nodeDelete == nodeDelete->parent->leftChild)
+                    {
+                        nodeDelete->parent->leftChild = nodeDelete->leftChild;
+                    }
+                    else if (nodeDelete == nodeDelete->parent->rightChild)
+                    {
+                        nodeDelete->parent->rightChild = nodeDelete->leftChild;
+                    }
+                }
+
+                delete nodeDelete;
+            }
+        }
+        // Two children
+            else if (nodeDelete->leftChild!=NULL && nodeDelete->rightChild!=NULL)
         {
             ItemNode *replNode = minimumNode(nodeDelete->rightChild);
             nodeDelete->item = replNode->item;
