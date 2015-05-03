@@ -61,10 +61,26 @@ int main(int argc, char* argv[])
         else if (input == 2)
         {
             string itemDelete;
-            cout << "What is the item that is sold:" << endl;
+            cout << "What is the item to be deleted:" << endl;
             getline(cin, itemDelete);
-
-            Item.deleteItemNode(itemDelete);
+            
+            bool sold;
+            string yn;
+            cout << "Was the item sold? (Enter "yes" or "no")" << endl;
+            getline(cin, yn);
+            if(yn == "yes") {
+            	sold = true;
+            }
+            else {
+            	sold = false;
+            }
+	    
+	    if(sold == true) {
+            	Item.deleteItemSoldNode(itemDelete);
+	    }
+	    else {
+	    	Item.deleteItemNotSoldNode(itemDelete);
+	    }
         }
 
         else if (input == 3)
