@@ -29,7 +29,8 @@ class ItemTree
         ItemTree();
         virtual ~ItemTree();
         void addItemNode(std::string item, int price);
-        void deleteItemNode(std::string item);
+        void deleteItemSoldNode(std::string item);
+        void deleteItemNotSoldNode(std::string item);
         void findItem(std::string item);
         int countItemNodes();
         void printInOrder();
