@@ -34,7 +34,7 @@ Hana Sunny (Ziyi Wang)
 
 ## Contributors
 
-None.
+Rachel Lewis (racheladdison)
 
 
 ## Open issues/bugs
