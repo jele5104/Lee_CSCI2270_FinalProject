@@ -30,6 +30,7 @@ int main(int argc, char* argv[])
     }
 
     int input;
+
     while (input != 9)
     {
         cout << "*******MENU*******" << endl
@@ -42,17 +43,23 @@ int main(int argc, char* argv[])
 			 << "7. Display unsold items (Post order)" << endl
 			 << "8. Display sold items" << endl
 			 << "9. Exit" << endl;
+        cin.clear();
+        cin.ignore();
         cin >> input;
-        cin.ignore(10000,'\n');
+
 
         if (input == 1)
         {
+            cin.clear();
+            cin.ignore();
             string item;
             cout << "What is your item to sell:" << endl;
             getline(cin, item);
 
             int price;
             cout << "What is the price of the item:" << endl;
+            cin.clear();
+            cin.ignore();
             cin >> price;
 
             Item.addItemNode(item, price);
@@ -62,11 +69,15 @@ int main(int argc, char* argv[])
         {
             string itemDelete;
             cout << "What is the item to be deleted:" << endl;
+            cin.clear();
+            cin.ignore();
             getline(cin, itemDelete);
-            
+
             bool sold;
             string yn;
-            cout << "Was the item sold? (Enter "yes" or "no")" << endl;
+            cout << "Was the item sold? (Enter \"yes" <<"\" or \"no" << "\")" << endl;
+            cin.clear();
+            cin.ignore();
             getline(cin, yn);
             if(yn == "yes") {
             	sold = true;
@@ -74,7 +85,7 @@ int main(int argc, char* argv[])
             else {
             	sold = false;
             }
-	    
+
 	    if(sold == true) {
             	Item.deleteItemSoldNode(itemDelete);
 	    }
@@ -87,6 +98,8 @@ int main(int argc, char* argv[])
         {
             string itemFind;
             cout << "What is the item you want to find:" << endl;
+            cin.clear();
+            cin.ignore();
             getline(cin, itemFind);
 
             Item.findItem(itemFind);
@@ -116,7 +129,12 @@ int main(int argc, char* argv[])
         {
             Item.printSold();
         }
+        else if(input == 9)
+        {
+            break;
+        }
     }
 
     cout << "Exit" << endl;
 }
+
